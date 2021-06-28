@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My First Sample Flex</title>
+         <style> 
+            body{
+                padding: 2em;
+            }
+            .headerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background:rgb(128, 208, 240); 
+                font-weight: bold;
+                padding: 10px;
+            }   
+            .footerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: lightgreen;
+                font-weight: bold;
+                padding: 10px;
+            }       
+            .mainContainer {
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem{
+                text-align: left;
+                background: rgb(236, 187, 232);
+            }
+
+            article{
+                padding: 10px;
+                margin: 10px;
+                background: aqua;
+            }
+
+              .sideBarLeftItem{
+                background: gold;
+            } 
+
+             .sideBarRightItem{
+                background : hotpink ;
+            } 
+
+            .sideBarItem{
+                flex: 1;
+                border: 5px solid rgba(0, 53, 168, 0.678);
+            }
+
+            .mainContentItem {
+                flex: 3 0px;
+            }
+            .sideBarLeftItem{
+                order: 1;
+            }
+
+            .mainContentItem{
+                order: 2;
+            }
+            
+            .sideBarRightItem{
+                order: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer">
+            <h1>Sample Flexbox</h1>
+        </header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>First Article</h2>
+                    <p>
+                        Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the big four Internet stocks along with Amazon, Facebook, and Apple.
+                    </p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+                    <p>Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is one of the Big Five companies in the U.S. information technology industry, along with Google, Apple, Microsoft, and Facebook
+                    </p>
+                </article>
+                <article>
+                    <h2>Third Article</h2>
+                    <p>Microsoft Corporation is an American multinational technology company which produces computer software, consumer electronics, personal computers, and related services
+                    </p>
+                </article>
+            </section>
+            <sidebar class="sideBarItem sideBarLeftItem">
+                <div class="center">
+                    <p>Left Side Bar</p>
+                </div>
+            </sidebar>
+             <sidebar class="sideBarItem sideBarRightItem"> 
+                <div class="center">
+                    <p>Right Side Bar</p>
+                </div>
+            </sidebar>
+        </div>
+
+        <footer class="footerContainer">
+            <h2>footer</h2>
+        </footer>
+    </body>
+</html>
